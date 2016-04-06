@@ -292,7 +292,7 @@ namespace pva {
          * \return Итератор на первый элемент вектора
          */
         
-        iterator begin() {
+        iterator& begin() {
             return iterator(data_);
         }
         
@@ -302,7 +302,7 @@ namespace pva {
          * \return Итератор на позицию последнего элемента вектора + 1
          */
         
-        iterator end() {
+        iterator& end() {
             return iterator(data_ + size_ + 1);
         }
         
