@@ -583,9 +583,7 @@ namespace pva {
     
     template<class T>
     T& vector<T>::operator [](const std::size_t &index) {
-        if (index > size_)
-            throw std::out_of_range("Index more than size of vector!");
-        return data_[index];
+        return const_cast<T&>(static_cast<const vector&>(*this)[index])
     }
     
     /*******************************************************
