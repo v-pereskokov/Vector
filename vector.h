@@ -583,7 +583,7 @@ namespace pva {
     
     template<class T>
     T& vector<T>::operator [](const std::size_t &index) {
-        return const_cast<T&>(static_cast<const vector&>(*this)[index])
+        return const_cast<T&>(static_cast<const vector<T> &>(*this)[index])
     }
     
     /*******************************************************
